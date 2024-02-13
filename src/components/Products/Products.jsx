@@ -7,7 +7,7 @@ function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetchProducts('iphone').then((response) =>{
+    fetchProducts('Dir en grey').then((response) =>{
       setProducts(response);
     });
   }, []);
