@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Products.css';
 import fetchProducts from '../../api/fetchProducts';
 import ProductCard from '../ProductCard/ProductCard';
+import AppContext from '../../context/AppContext';
 
 function Products() {
-  const [products, setProducts] = useState([]);
+  
+  const { products, setProducts } = useContext(AppContext);
 
   useEffect(() => {
-    fetchProducts('Dir en grey').then((response) =>{
+    fetchProducts('').then((response) =>{
       setProducts(response);
     });
   }, []);
