@@ -8,7 +8,7 @@ function Header() {
   return(
     <header className='header'>
       <div className='container'>
-        <h1>Placeholder</h1>
+        <h1>Pocketbox</h1>
         <SearchBar></SearchBar>
         <CartButton/>
       </div>
